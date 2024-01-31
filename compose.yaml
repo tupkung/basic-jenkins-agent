@@ -6,7 +6,7 @@ services:
     container_name: jenkins-agent
     restart: unless-stopped
     networks:
-      - jenkins-agent
+      - jenkins
     ports:
       - 4444:22
     volumes:
