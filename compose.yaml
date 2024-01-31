@@ -36,3 +36,8 @@ services:
 volumes:
   jenkins-docker-certs:
     driver: overlay2
+
+networks:
+  jenkins:
+    name: jenkins
+    type: bridge
