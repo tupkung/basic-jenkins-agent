@@ -93,7 +93,7 @@ ENV LANG='C.UTF-8' LC_ALL='C.UTF-8'
 
 ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
-ENV PATH="/usr/local/bin:${PATH}"
+
 COPY --from=jre-build /javaruntime $JAVA_HOME
 
 RUN echo "PATH=${PATH}" >> /etc/environment
