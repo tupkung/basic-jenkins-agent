@@ -39,5 +39,3 @@ volumes:
 
 networks:
   jenkins:
-    name: jenkins
-    type: bridge
