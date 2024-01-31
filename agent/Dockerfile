@@ -35,6 +35,7 @@ RUN if test "${TARGETPLATFORM}" != 'linux/arm/v7'; then \
 
 FROM debian:"${DEBIAN_RELEASE}"
 
+USER root
 ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
@@ -101,4 +102,4 @@ COPY setup-sshd /usr/local/bin/setup-sshd
 
 EXPOSE 22
 
-ENTRYPOINT ["/usr/local/bin/setup-sshd"]
+ENTRYPOINT ["setup-sshd"]
