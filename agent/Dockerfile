@@ -1,6 +1,7 @@
 FROM jenkins/ssh-agent:debian-jdk17
 
-RUN apt-get install -qy \
+RUN apt-get update && \
+    apt-get install -qy \
     curl \
     apt-transport-https \
     lsb-release \
