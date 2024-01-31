@@ -35,8 +35,9 @@ RUN apt-get update && \
 RUN chown -R jenkins:jenkins /home/jenkins/.m2/ && \
     chown -R jenkins:jenkins /home/jenkins/.ssh/
 
-
+COPY setup-sshd /usr/local/bin/setup-sshd
 
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+ENTRYPOINT ["setup-sshd"]
+# CMD ["/usr/sbin/sshd", "-D"]
