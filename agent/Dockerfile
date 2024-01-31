@@ -62,7 +62,9 @@ RUN apt-get update \
         openssh-server \
         patch \
         curl \
-        wget \
+        apt-transport-https \
+        lsb-release \
+        gnupg \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
